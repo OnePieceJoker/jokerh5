@@ -1,5 +1,23 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>Shopping Cart Example</h1>
+    <hr>
+    <h2>Products</h2>
+    <ProductList/>
+    <hr>
+    <ShoppingCart/>
   </div>
 </template>
+
+<script lang="ts">
+import ProductList from './ProductList.vue';
+import ShoppingCart from './ShoppingCart.vue';
+import { Options, Vue } from 'vue-class-component'
+
+@Options({
+  components: {
+    ProductList, ShoppingCart
+  }
+})
+export default class About extends Vue {}
+</script>

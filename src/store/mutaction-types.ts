@@ -5,3 +5,6 @@ export const SET_CHECKOUT_STATUS = 'setCheckoutStatus';
 
 export const INCREMENT = 'increment';
 export const DECREMENT = 'decrement';
+
+export const SET_PRODUCTS = 'setProducts';
+export const DECREMENT_PRODUCT_INVENTORY = 'decrementProductInventory';

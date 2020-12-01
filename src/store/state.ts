@@ -8,15 +8,24 @@ export interface Counter {
   history: string[]
 }
 
-export interface RootState {
-  counter: Counter
+export interface IProduct {
+  id: number,
+  title: string,
+  price: number,
+  inventory: number
+  quantity?: number
 }
 
-const state: RootState = {
-  counter: {
-      count: 0,
-      history: []
-  }
-};
+export interface Products {
+  all: IProduct[]
+}
 
-export default state;
+export interface Cart {
+  items: IProduct[],
+  checkoutStatus: string | null
+}
+
+export interface RootState {
+  counter: Counter,
+  cart: Cart
+}
