@@ -22,7 +22,9 @@ import { IProduct } from '../store/state'
 
 @Options({
   computed: {
+    // mix this into the outer object with the object spread operator
     ...mapState({
+      // 等同于 `checkoutStatue: state => state.checkoutStatue`
       checkoutStatus: 'checkoutStatus'
     }),
     ...mapGetters({

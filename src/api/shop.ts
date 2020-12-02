@@ -11,7 +11,7 @@ export default {
     setTimeout(() => cb(_products), 100)
   },
 
-  butProducts(products: IProduct[], cb: () => void, errorCb: any) {
+  butProducts(products: IProduct[], cb: Function, errorCb: any) {
     setTimeout(() => {
       (Math.random() > 0.5 || navigator.webdriver) 
         ? cb()
