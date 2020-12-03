@@ -24,8 +24,11 @@ import { IProduct } from '../store/state'
   computed: {
     // mix this into the outer object with the object spread operator
     ...mapState({
-      // 等同于 `checkoutStatue: state => state.checkoutStatue`
-      checkoutStatus: 'checkoutStatus'
+      // 等同于 `checkoutStatus: state => state.cart.checkoutStatus`
+      // module state is already nested and not affected by namespace option
+      // 我们在获取状态时带上namespace保证数据能正常渲染
+      // 不然的话更新mutactions中更新了checkoutStatus，但mapState这边未更新
+      checkoutStatus: (state: any) => state.cart.checkoutStatus
     }),
     ...mapGetters({
       products: 'cartProducts',

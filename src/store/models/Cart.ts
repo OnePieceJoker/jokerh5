@@ -22,7 +22,8 @@ const getters = {
     return getters.cartProducts.reduce((total: any, product: IProduct) => {
       return total + product.price * product.quantity!
     }, 0)
-  }
+  },
+  checkoutStatus: (state: any) => { return state.checkoutStatus }
 }
 
 const mutations = {
