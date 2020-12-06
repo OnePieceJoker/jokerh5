@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import Editor from '../views/Editor.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    redirect: '/editor'
   },
   {
     path: '/about',
@@ -18,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/editor',
     name: 'Editor',
-    component: () => import('../views/Editor.vue')
+    component: Editor
   }
 ]
 
