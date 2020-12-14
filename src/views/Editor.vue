@@ -2,7 +2,7 @@
   <div class="edit-page">
     <a-layout id="components-layout-top-side-2">
       <a-layout>
-        <a-layout-sider width="300" style="background: #fff">
+        <a-layout-sider width="15%" style="background: #fff">
           <a-tabs>
             <a-tab-pane key="components" tab="组件列表">
               组件列表
@@ -72,7 +72,7 @@
             </div>
           </a-layout-content>
         </a-layout>
-        <a-layout-sider width="500" style="background: #fff">
+        <a-layout-sider width="25%" style="background: #fff">
           <a-tabs>
             <a-tab-pane key="属性" tab="属性">
               从这里进行属性编辑
@@ -137,8 +137,8 @@ export default class Editor extends Vue {}
   top: -2px;
   text-align: center;
   z-index: 1000;
-  left: 300px;
-  right: 500px;
+  left: 15%;
+  right: 25%;
 }
 .edit-main {
   background-size: 26px 26px;
